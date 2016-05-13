@@ -20,6 +20,11 @@ npm install hexo-deployer-git --save
 
 ## 配置
 
+```
+mkdir -p source/_conf
+mv _config.yml source/_conf && ln -s source/_conf/_config.yml _config.yml
+```
+
 vi _config.yml
 
 ```yaml
@@ -60,6 +65,20 @@ vi themes/yelee/layout/_partial/post/nav.ejs
 
 ## 发布
 
-`hexo d`
+```shell
+hexo clean
+hexo deploy
+```
+
+## FAQ
+
+1. 过滤README.md
+
+```
+skip_render:
+  README.md
+```
+
+
 
 
